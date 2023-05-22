@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>weather App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/c1446bc3a3.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            background: url('https://images.pexels.com/photos/209831/pexels-photo-209831.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+            /* color: var(--text-color); */
+            background-repeat: no-repeat;
+            background-size: 100%;
+
+        }
+
+        .navbar {
+            background: url('https://images.pexels.com/photos/209831/pexels-photo-209831.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+
+        .container-fluid {
+           
+            padding: 4rem;
+            display: flex;
+            justify-content: space-between;
+        }
+        .fa-solid {
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div>
+            <h1>
+
+                <a class="navbar-brand" href="#">Weather App</a>
+            </h1>
+        </div>
+        <div>  <form class=" d-flex " role="search">
+            <input id="city" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-light" type="submit" id="submit">Search</button>
+        </form></div>
+    </div>
+    
+
+    <div class="container">
+        <h1 class="my-4 text-center">Weather for <span id="cityName"></span></h1>
+        <main>
+            <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+                <div class="col">
+                    <div class="card mb-4 rounded-3 shadow-sm">
+                        
+                        <div class="card-body">
+                            <i class="fa-solid fa-temperature-three-quarters fa-beat fa-5x"></i>
+                            <h1 class="card-title pricing-card-title">Temperatures <small
+                                    class="text-muted fw-light"><span>&#8451;</span></small></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li> Temperature is <span id="temp"></span> </li>
+                                <li> Min Temperature is <span id="min_temp"></span> </li>
+                                <li> Max Temperature is <span id="max_temp"></span> </li>
+
+                            </ul>
+                           
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card mb-4 rounded-3 shadow-sm">
+                        
+                        <div class="card-body">
+                            <i class="fa-solid fa-droplet fa-beat fa-5x"></i>
+                            <h1 class="card-title pricing-card-title">Humidity <small
+                                    class="text-body-secondary fw-light"> %</small></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li> Wind Degree is <span id="wind_degrees"></span> </li>
+                                <li> Feels Like <span id="feels_like"></span> </li>
+                                <li> Humidity is <span id="humidity"></span> </li>
+                            </ul>
+                           
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card mb-4 rounded-3 shadow-sm border-primary">
+                        
+                        <div class="card-body">
+                            <i class="fa-solid fa-wind fa-beat fa-5x"></i>
+                            <h1 class="card-title pricing-card-title">Wind Info<small
+                                    class="text-body-secondary fw-light"> km/hr</small></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+
+                                <li> Wind Speed is <span id="wind_speed"></span> </li>
+                                <li> Sunrise Time is <span id="sunrise"></span> </li>
+                                <li> Sunset Time is <span id="sunset"></span> </li>
+
+                            </ul>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <h2 class="display-6 text-center mb-4">Weather of other common place</h2> -->
+
+            <!-- <div class="table-responsive">
+                <table class="table text-center">
+                    <thead>
+                        <tr>
+                            <th style="width: 34%;"></th>
+                            <th style="width: 22%;">Cloud_pet</th>
+                            <th style="width: 22%;">Feels_like</th>
+                            <th style="width: 22%;">Humidity</th>
+                            <th style="width: 22%;">Max_temp</th>
+                            <th style="width: 22%;">Min_temp</th>
+                            <th style="width: 22%;">Sunrise</th>
+                            <th style="width: 22%;">Sunset</th>
+                            <th style="width: 22%;">Temp</th>
+                            <th style="width: 22%;">Wind_degrees</th>
+                            <th style="width: 22%;">Wind_speed</th>
+
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row" class="text-start">Shanghai</th>
+
+
+                            <td>2</td>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>2</td>
+
+                        </tr>
+                        <tr>
+                            <th scope="row" class="text-start">Boston</th>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>2</td>
+
+                        </tr>
+                    </tbody>
+
+                    <tbody>
+                        <tr>
+                            <th scope="row" class="text-start">Lucknow</th>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>2</td>
+
+                        </tr>
+                        <tr>
+                            <th scope="row" class="text-start">Kolkata</th>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>2</td>
+
+                        </tr>
+
+                    </tbody> -->
+            <!-- </table> -->
+            <!-- </div> -->
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
